@@ -1,0 +1,32 @@
+<configuration>
+	<property>
+
+	    <name>mapred.job.tracker</name>
+
+		<value>localhost:54311</value>
+
+		<description>The host and port that the MapReduce job tracker runs
+
+			at. If “local”, then jobs are run in-process as a single map
+
+			and reduce task.
+
+          	</description>
+        </property>
+         <property>
+             <name>mapreduce.framework.name</name>
+             <value>yarn</value>
+     </property>
+     <property>
+	       <name>yarn.app.mapreduce.am.env</name>
+	       <value>HADOOP_MAPRED_HOME=$HADOOP_HOME</value>
+	</property>
+         <property>
+	     <name>mapreduce.map.env</name>
+	     <value>HADOOP_MAPRED_HOME=$HADOOP_HOME</value>
+        </property>
+        <property>
+	       <name>mapreduce.reduce.env</name>
+	       <value>HADOOP_MAPRED_HOME=$HADOOP_HOME</value>
+	</property>
+</configuration>
